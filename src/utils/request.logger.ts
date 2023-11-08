@@ -2,6 +2,10 @@ import { Request, Response, NextFunction } from "express";
 import { v4 as uuidv4 } from "uuid";
 import fs from "fs";
 
+	/**
+	 * This logs all the requests in the console for development and for debugging
+	 *
+	 */
 const requestLogger = (
 	req: Request,
 	res: Response,

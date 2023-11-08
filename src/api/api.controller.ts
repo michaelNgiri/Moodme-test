@@ -8,7 +8,7 @@ class ApiController{
 	 * @param req.query
 	 *
 	 */
-    async getRestaurants(req: Request, res: Response) { 
+    async search(req: Request, res: Response) { 
         // console.log("API service, fetching paginated data");
         try {
             const query = req.query;

@@ -1,6 +1,10 @@
 import winston from "winston";
 import AppEnv from "./appenv.utils";
 
+	/**
+	 * This function loggs every request to the server
+	 *
+	 */
 const customLevels = {
 	levels: {
 		trace: 5,

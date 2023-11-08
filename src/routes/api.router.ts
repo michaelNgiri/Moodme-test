@@ -3,7 +3,7 @@ import ApiController from "../api/api.controller"
 
 
 const ApiRouter = express.Router()
-	.get("/restaurants", ApiController.getRestaurants)
+	.get("/search", ApiController.search)
 
 	;
 

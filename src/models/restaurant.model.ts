@@ -3,13 +3,21 @@ const schema = mongoose.Schema;
 import restaurantList from "../data/restaurants"
 import { Config } from "./config.model";
 
-
+	/**
+	 * Address schema
+	 *
+	 */
 const AddressSchema = new schema(
 	{
 		building: { type: String },
 		street: { type: String }
 	}
 );
+
+	/**
+	 * Store grades for each restaurant in a sub document
+	 *
+	 */
 const GradesSchema = new schema(
 	{
 		date: { type: Date },
@@ -18,6 +26,10 @@ const GradesSchema = new schema(
 	}
 );
 
+	/**
+	 * This defines a structure for each restaurant
+	 *
+	 */
 const RestaurantSchema= new schema(
 	{
 		address: { type: AddressSchema },
@@ -31,7 +43,13 @@ const RestaurantSchema= new schema(
 export const Restaurant = mongoose.model("Restaurant", RestaurantSchema);
 
 
+	/**
+	 * Initialize the database and import existing data
+	 *
+	 */
 Restaurant.init().then(async () => {
+
+	// check if data has been imported already; this will prevent imports from running everytime you start the server.
 	const dbImported = await Config.findOne({ config: "db_imported", value: true });
 	if (!dbImported) {
 		console.log("DB import started");
