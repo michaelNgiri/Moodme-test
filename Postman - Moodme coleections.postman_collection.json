@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "3648fe85-b566-4ca9-8bfd-971ea8c6d23d",
+		"name": "Moodme coleections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29787187",
+		"_collection_link": "https://www.postman.com/wheelmax/workspace/wheelmax/collection/29787187-3648fe85-b566-4ca9-8bfd-971ea8c6d23d?action=share&source=collection_link&creator=29787187"
+	},
+	"item": [
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://moodme-test-env.eba-9h7v7fky.us-east-1.elasticbeanstalk.com/api/v1/search?limit=100&page=1&cuisine=American",
+					"protocol": "http",
+					"host": [
+						"moodme-test-env",
+						"eba-9h7v7fky",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "Maloney'S Bar",
+							"disabled": true
+						},
+						{
+							"key": "cuisine",
+							"value": "American"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "40366857",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
